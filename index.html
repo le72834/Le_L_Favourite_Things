@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All about me!</title>
+
+    <!-- this has to be a css file-->
+    <link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+    <main id="app">
+        <h1 class="hidden">This is all about I like.</h1>
+        <div class="pic">
+            <img src="images/pic.jpg" alt="Picture">
+        </div>
+        <div class="info">
+            <h2>Things I love</h2>
+            <img src="images/love.png" alt="Heart">
+        </div>
+        <nav class="main-thing">
+            <li class="thing-item"><img src="images/pie.png" alt="Pie"><a href="#">Foods</a></li>
+            <li class="thing-item"><img src="images/sky.png" alt="Sky"><a href="#">Sky</a></li>
+            <li class="thing-item"><img src="images/movies.png" alt="Movies"><a href="#">Movies</a></li>
+            <li class="thing-item"><img src="images/friends.png" alt="Friends"><a href="#">Friends</a></li>
+
+        </nav>
+
+        <section class="user-section"></section>
+        
+    </main><!--Close app-->
+    <template id="user-template">
+        <div class="user">
+            <h1 class="hidden"></h1>
+            <img src="temp.jpg" alt="user image">
+        </div>
+    </template>
+    <!-- script file always go here-->
+    <script type="module" src="js/main.js"></script>
+</body>
+</html>

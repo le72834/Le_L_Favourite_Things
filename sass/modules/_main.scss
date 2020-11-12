@@ -1,0 +1,16 @@
+body {
+    font-family: $main-font-family;
+    margin: 0;
+    border: 0;
+    color: $main-text-color;
+    background-color: #fce6e0;
+    max-width: 1000px;
+    min-width: 300px;
+}
+.hidden {
+    display: none;
+}
+.pic {
+    margin:0;
+}
+
