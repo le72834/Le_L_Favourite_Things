@@ -1,0 +1,128 @@
+.nav-position {
+    position: fixed;
+    left: 0;
+    right:0;
+    z-index: 3;
+    background-color:#F9EBEA;
+}
+.mainNavCon {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    padding: 10px;
+}
+.mainNav {
+    display: none;
+}
+.mainNav.slide-toggle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    padding: 50px;
+    right: 0;
+    ul{
+        margin-top: 60px;
+        li{
+            margin-bottom: 55px;
+        }
+    }
+    a{
+        font-size: 2em;
+        color: $main-text-color;
+        line-height: 2em;
+        transition: all ease-out;
+        &:focus {
+            color: $main-text-color;
+        }
+        &:hover {
+            transition: all .5s ease-out;
+        }
+    }
+}
+.hamburgerNav {
+    display: flex;
+    flex-direction: column;
+    transition: opacity 0.5s ease-out;
+}
+.hamburger {
+    font-size: 25px;
+    color:#34495E ;
+    align-self: flex-end;
+    
+}
+.hamburger.expanded {
+    -webkit-transform: rotate(90deg);
+	-ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    transform-origin: center center;
+    opacity: 0.5;
+}
+.hamburgerNav.slide-toggle{
+    position: fixed;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+    text-align: center;
+    background-color:#FDEDEC;
+    animation: fade-in 0.2s 1 ease-out;
+    right:0;
+    left: 0;
+    top:0;
+    bottom: 0;
+}
+.logo {
+    max-width: 40px;
+}
+
+@media screen and (min-width: $tablet-size){
+    .mainNavCon {
+        padding: 10px;
+    }
+    .hamburgerNav.slide-toggle {
+        padding: 20px 20px 0 0;
+
+    }
+}
+@media screen and (min-width: $desktop-size) {
+    .fa.hamburger {
+        display: none;
+    }
+    .hamburgerNav {
+        flex: 1;
+    }
+    .mainNavCon {
+        padding: 10px;
+        a:hover {
+            color: #D7BDE2;
+        }
+    }
+    .mainNav {
+        display: flex;
+        flex: 1;
+        justify-content: flex-end;
+        align-items: center;
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex: 1;
+            max-width: 400px;
+            
+        }
+        a{
+            color: $main-text-color;
+            text-decoration: none;
+            
+        }
+    }
+    .logo {
+        align-self: center;
+        margin-right: 300px;
+    }
+}
